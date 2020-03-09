@@ -5,7 +5,7 @@ Urban Dictionary is a crowdsourced online dictionary for slang words and phrases
 ## Libraries Used
 - Retrofit 2
 
-- Dagger 2
+- Koin
 
 - Kotlin Coroutines
 
