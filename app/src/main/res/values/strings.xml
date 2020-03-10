@@ -15,5 +15,7 @@
     <string name="word_written">Written on : %s</string>
     <string name="up_votes">Up Votes image</string>
     <string name="down_votes">Down Votes Image</string>
+    <string name="add_to_favorite">Favorites</string>
+    <string name="sort">Sort</string>
 
 </resources>
