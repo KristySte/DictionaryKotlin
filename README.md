@@ -13,6 +13,10 @@ The `data `package has room components.
 ## Libraries Used
 - Retrofit 2
 
+- Data Binding
+
+- Room DB
+
 - Koin
 
 - Kotlin Coroutines
