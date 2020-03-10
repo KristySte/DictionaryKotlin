@@ -1,5 +1,12 @@
 # DictionaryKotlin
 
+
+ <p align="left">
+      
+ <img src="https://img.shields.io/badge/status-incomplete-orange.svg" />
+      
+</p>
+
 Urban Dictionary is a crowdsourced online dictionary for slang words and phrases, operating under the motto "Define Your World." The website was founded in 1999 by Aaron Peckham.
 
 ## Packages:
