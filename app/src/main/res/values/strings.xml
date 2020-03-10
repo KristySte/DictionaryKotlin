@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">DictionaryKotlin</string>
+    <string name="app_name">Urban Dictionary</string>
+    <string name="welcome">Urban Dictionary</string>
+    <string name="image_ic_dictionary">Ic Dictionary Image</string>
+    <string name="open_urban_dictionary">Open Dictionary</string>
+    <string name="description">Urban Dictionary is a crowdsourced online dictionary for slang words and phrases.</string>
+    <string name="description_two">Urban Dictionary is a crowdsourced online dictionary for slang words and phrases. Click the search bar to search word and enjoy</string>
+    <string name="title_activity_dictionary">DictionaryActivity</string>
+    <string name="settings">Settings</string>
+    <string name="enter_word">Type word</string>
+    <string name="search">search</string>
+    <string name="image_play">Play Word</string>
+    <string name="thumb_value">Vote : %2$d</string>
+    <string name="author_name">Author : %s</string>
+    <string name="word_written">Written on : %s</string>
+    <string name="up_votes">Up Votes image</string>
+    <string name="down_votes">Down Votes Image</string>
+
 </resources>

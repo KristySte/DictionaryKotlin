@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sixteen_dp">16dp</dimen>
+    <dimen name="thirty_dp">30</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="twenty_four_sp">24sp</dimen>
+    <dimen name="image_view_dp">115dp</dimen>
+    <dimen name="description_dp">360dp</dimen>
+    <dimen name="description_height_dp">90dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="text_size_sp">14sp</dimen>
+    <dimen name="welcome_width_dp">328dp</dimen>
+    <dimen name="welcome_height_dp">56dp</dimen>
+    <dimen name="twenty_six_dp">26dp</dimen>
+    <dimen name="top_margin">84dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+    <dimen name="forty_five_dp">45dp</dimen>
+    <dimen name="thirty_six_dp">36dp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="sixty_dp">60dp</dimen>
+    <dimen name="six_dp">6dp</dimen>
+    <dimen name="cardview_elevation">4dp</dimen>
+</resources>
