@@ -34,4 +34,5 @@ The `data `package has room components.
 - Testing (Mockito)
 
 ## App Samples
-<img src="https://user-images.githubusercontent.com/11560987/76270331-481ab300-624b-11ea-9ae0-23cb803c054f.jpg" width="280"/> 
+<img src="https://user-images.githubusercontent.com/11560987/76270331-481ab300-624b-11ea-9ae0-23cb803c054f.jpg" width="280"/> <img src="https://user-images.githubusercontent.com/11560987/76461655-b3cd5f00-63b6-11ea-9c1c-355b4e698770.jpg" width="280"/> 
+
