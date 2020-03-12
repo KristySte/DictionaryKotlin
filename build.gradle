@@ -13,7 +13,6 @@ buildscript {
     ext.rxJava2 = '2.4.0'
     ext.moshi ='2.4.0'
     ext.exprimental_adapter_coroutines = '1.0.0'
-    ext.work_runtime = '2.0.1'
     ext.lifecycle = '2.1.0'
     repositories {
         google()
