@@ -17,5 +17,9 @@
     <string name="down_votes">Down Votes Image</string>
     <string name="add_to_favorite">Favorites</string>
     <string name="sort">Sort</string>
+    <string name="definition">Word Definition</string>
+    <string name="network_issue">Check your connection</string>
+    <string name="try_again">Please try again</string>
+
 
 </resources>

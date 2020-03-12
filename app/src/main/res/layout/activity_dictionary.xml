@@ -9,6 +9,8 @@
 
     <!--progress bar -->
 
+
+
     <ProgressBar
         android:id="@+id/progress_search_bar"
         style="?android:attr/progressBarStyle"
@@ -16,19 +18,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
         android:layout_marginEnd="213dp"
         android:layout_marginRight="213dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/word_search" />
-
     <!--Recycler view -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_word"
-        android:layout_width="404dp"
-        android:layout_height="629dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
@@ -41,16 +43,16 @@
         app:layout_constraintTop_toBottomOf="@+id/progress_search_bar"
         app:layout_constraintVertical_bias="0.473" />
     <!-- Search view -->
-    <SearchView
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/word_search"
-        android:layout_width="357dp"
-        android:layout_height="43dp"
+        android:layout_width="229dp"
+        android:layout_height="44dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:queryHint="@string/enter_word"
+        android:hint="@string/enter_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,10 +68,27 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/description_two"
+        android:text="@string/description"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="82dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/word_search"
+        app:layout_constraintTop_toBottomOf="@+id/small_description" />
 </androidx.constraintlayout.widget.ConstraintLayout>
