@@ -99,7 +99,7 @@ class DictionaryActivity : AppCompatActivity() {
 
     private fun onError(errorHelper: ErrorHelper) = when (errorHelper.errorStatus) {
         ERROR_STATUS.ERR -> {
-            Toast.makeText(this, "Sorry try again", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Sorry word does not exist yest you can create it :)", Toast.LENGTH_SHORT).show()
         }
         ERROR_STATUS.NETWORK -> {
             Toast.makeText(this, getString(R.string.network_issue), Toast.LENGTH_SHORT).show()

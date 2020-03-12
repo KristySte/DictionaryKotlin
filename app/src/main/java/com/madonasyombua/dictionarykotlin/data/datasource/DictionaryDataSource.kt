@@ -14,7 +14,7 @@ import com.madonasyombua.dictionarykotlin.data.utils.safeApiCall
  * @author madona
  * The data source class gets the Api's
  */
-//class DictionaryDataSource(private val api: Api, private val mainApi: MainApi){
+
 class DictionaryDataSource(private val api: Api){
     suspend fun  definition(word: String) = safeApiCall(
         call ={getDefinition(word)}

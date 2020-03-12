@@ -21,7 +21,8 @@
         <activity
             android:name=".presentation.ui.activities.DefinitionActivity"
             android:label="@string/definition"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".presentation.ui.activities.DictionaryActivity"/>
         <activity
             android:name=".presentation.ui.activities.DictionaryActivity"
             android:label="@string/app_name"

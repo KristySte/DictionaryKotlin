@@ -16,10 +16,15 @@
     <string name="up_votes">Up Votes image</string>
     <string name="down_votes">Down Votes Image</string>
     <string name="add_to_favorite">Favorites</string>
-    <string name="sort">Sort</string>
+    <string name="sort">Sort By</string>
     <string name="definition">Word Definition</string>
     <string name="network_issue">Check your connection</string>
     <string name="try_again">Please try again</string>
+    <string name="define">Definition:</string>
+    <string name="author">The Author:</string>
+    <string name="sample">Sample:</string>
+    <string name="published_on">Published On</string>
+    <string name="thumbs">thumbs images</string>
 
 
 </resources>
