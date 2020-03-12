@@ -16,12 +16,14 @@ import kotlinx.coroutines.*
 class DictionaryLocalRepository (private val wordDao: WordDao){
 
 
+    //get word entries
     suspend fun getAllWordEntries(): List<WordEntity> {
         return withContext(Dispatchers.Default) {
             wordDao.getWordList()
         }
     }
 
+    // get word by id
     suspend fun getWordById(defId: Int): WordEntity? {
         return withContext(Dispatchers.Default) {
             wordDao.getWordByDefId(defId)

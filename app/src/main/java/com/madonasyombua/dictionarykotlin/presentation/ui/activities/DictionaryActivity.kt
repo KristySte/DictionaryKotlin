@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.madonasyombua.dictionarykotlin.R
 import com.madonasyombua.dictionarykotlin.data.response.Word
-import com.madonasyombua.dictionarykotlin.data.utils.DefinitionDetailIntent
+import com.madonasyombua.dictionarykotlin.data.utils.Intent1
 import com.madonasyombua.dictionarykotlin.data.utils.ERROR_STATUS
 import com.madonasyombua.dictionarykotlin.data.utils.ErrorHelper
 import com.madonasyombua.dictionarykotlin.data.utils.observeWith
@@ -29,10 +29,10 @@ import org.koin.android.ext.android.inject
 
 class DictionaryActivity : AppCompatActivity() {
 
-    lateinit var dictionaryViewModel: DictionaryViewModel
+    private lateinit var dictionaryViewModel: DictionaryViewModel
     private val dictionaryViewModelFactory by inject<DictionaryViewModelFactory>()
 
-    lateinit var dictionaryAdapter: DictionaryAdapter
+    private lateinit var dictionaryAdapter: DictionaryAdapter
 
 
 
@@ -58,7 +58,7 @@ class DictionaryActivity : AppCompatActivity() {
 
         dictionaryAdapter.setOnClickListener(object : DictionaryAdapter.OnItemClickListener {
             override fun onClick(view: View, data: Word) {
-                startActivity(DefinitionDetailIntent(data))
+                startActivity(Intent1(data))
             }
 
 
@@ -99,7 +99,7 @@ class DictionaryActivity : AppCompatActivity() {
 
     private fun onError(errorHelper: ErrorHelper) = when (errorHelper.errorStatus) {
         ERROR_STATUS.ERR -> {
-            Toast.makeText(this, "Sorry word does not exist yest you can create it :)", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Sorry word does not exist, you can create it :)", Toast.LENGTH_SHORT).show()
         }
         ERROR_STATUS.NETWORK -> {
             Toast.makeText(this, getString(R.string.network_issue), Toast.LENGTH_SHORT).show()

@@ -19,7 +19,7 @@ import org.koin.android.ext.android.inject
  */
 class DefinitionActivity : AppCompatActivity() {
 
-    lateinit var dictionaryViewModel: DictionaryViewModel
+    private lateinit var dictionaryViewModel: DictionaryViewModel
     private val dictionaryViewModelFactory by inject<DictionaryViewModelFactory>()
 
     private lateinit var word: Word

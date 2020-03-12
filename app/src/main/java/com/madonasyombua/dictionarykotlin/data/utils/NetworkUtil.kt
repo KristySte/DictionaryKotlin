@@ -53,7 +53,7 @@ enum class ERROR_STATUS {
     ERR
 }
 
-fun Context.DefinitionDetailIntent(word: Word): Intent {
+fun Context.Intent1(word: Word): Intent {
     return Intent(this, DefinitionActivity::class.java).apply {
         val wordJsonBody = Gson().toJson(word)
         putExtra(Constants.INTENT_WORD_JSON, wordJsonBody)

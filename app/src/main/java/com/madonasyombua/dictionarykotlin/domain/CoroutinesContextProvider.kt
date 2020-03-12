@@ -2,7 +2,6 @@ package com.madonasyombua.dictionarykotlin.domain
 
 
 import kotlin.coroutines.CoroutineContext
-
 import kotlinx.coroutines.Dispatchers
 
 /**

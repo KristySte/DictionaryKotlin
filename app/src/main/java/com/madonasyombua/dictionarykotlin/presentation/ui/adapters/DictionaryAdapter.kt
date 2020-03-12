@@ -15,7 +15,7 @@ import com.madonasyombua.dictionarykotlin.databinding.WordAdapterBinding
  */
 class DictionaryAdapter : RecyclerView.Adapter<DictionaryAdapter.DictionaryBindingHolder>(){
 
-    lateinit var listener : OnItemClickListener
+    private lateinit var listener : OnItemClickListener
     private var wordList : ArrayList<Word> = ArrayList()
 
 

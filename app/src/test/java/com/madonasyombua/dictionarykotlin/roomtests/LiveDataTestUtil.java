@@ -7,8 +7,6 @@ import androidx.lifecycle.Observer;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import okio.Timeout;
-
 class LiveDataTestUtil{
 
     static <T> T getValue(final LiveData<T> tLiveData) throws InterruptedException{

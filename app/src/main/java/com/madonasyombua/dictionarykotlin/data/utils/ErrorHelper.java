@@ -1,5 +1,8 @@
 package com.madonasyombua.dictionarykotlin.data.utils;
 
+/**
+ * @author madona
+ */
 public class ErrorHelper extends Throwable{
 
     private ERROR_STATUS errorStatus;

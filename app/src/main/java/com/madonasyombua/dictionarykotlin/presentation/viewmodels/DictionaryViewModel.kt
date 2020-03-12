@@ -2,7 +2,7 @@ package com.madonasyombua.dictionarykotlin.presentation.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.work.*
+
 import com.madonasyombua.dictionarykotlin.data.response.BaseResponse
 import com.madonasyombua.dictionarykotlin.data.response.Results
 import com.madonasyombua.dictionarykotlin.data.response.Word
@@ -25,11 +25,9 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
 
     private var currentJob = Job()
 
-    var workManager: WorkManager = WorkManager.getInstance()
-
-    private val _uiModel = MutableLiveData<List<Word>>()
+    private val mutableLiveData = MutableLiveData<List<Word>>()
     val uiModel: LiveData<List<Word>>
-        get() = _uiModel
+        get() = mutableLiveData
 
 
 
@@ -39,6 +37,7 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
     }
 
 
+    // I can use this for more functionalities like adding favorite
     fun insertOrUpdateWord(word: Word) {
 
         val wordDB = WordEntity()
@@ -80,7 +79,6 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
             )
             listWords.add(word)
         }
-     /*   emitFavWords(listWords)*/
     }
 
     private fun launchDefinition(word: String) = GlobalScope.launch(coroutinesContextProvider.io) {
@@ -93,16 +91,16 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
         progress.postValue(false)
         when (results) {
             is Results.Success -> {
-                emitUiModel(results.data)
+                model(results.data)
             }
             is Results.Error -> {
                 errorBase.postValue(results.exception as ErrorHelper?)
             }
         }
     }
-    private fun emitUiModel(data: BaseResponse) =
+    private fun model(data: BaseResponse) =
         GlobalScope.launch(coroutinesContextProvider.main) {
-            _uiModel.value = data.wordList
+            mutableLiveData.value = data.wordList
         }
 
 
