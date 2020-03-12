@@ -20,7 +20,7 @@ The `domain` package has usecase, domain models, and repository interfaces.
 The `data `package has room components.
 
 
-## Libraries Used
+## The project uses
 - Retrofit 2
 
 - Data Binding
