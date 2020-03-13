@@ -16,6 +16,13 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+/**
+ * @author Madona
+ *  The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way and
+ *  For simple data, the activity can use the onSaveInstanceState() method and restore its data from the bundle
+ *  in onCreate(), but this approach is only suitable for small amounts of data that can be serialized then
+ *  deserialized, not for potentially large amounts of data like a list of users or bitmaps.
+ */
 class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
                           private val dictionaryLocalUseCase: DictionaryLocalUseCase,
 
@@ -23,12 +30,10 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
 ) : MainViewModel() {
 
 
-    private var currentJob = Job()
 
     private val mutableLiveData = MutableLiveData<List<Word>>()
     val uiModel: LiveData<List<Word>>
         get() = mutableLiveData
-
 
 
     fun getDefinition(word: String) {
@@ -37,7 +42,7 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
     }
 
 
-    // I can use this for more functionalities like adding favorite
+    // I can use this for more functionalities like adding favorite and test when data added
     fun insertOrUpdateWord(word: Word) {
 
         val wordDB = WordEntity()
