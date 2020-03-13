@@ -22,8 +22,8 @@
 
             <TextView
                 android:id="@+id/definition_"
-                android:layout_width="79dp"
-                android:layout_height="25dp"
+                android:layout_width="69dp"
+                android:layout_height="27dp"
                 android:layout_marginStart="136dp"
                 android:layout_marginLeft="136dp"
                 android:layout_marginTop="16dp"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="60dp"
                 android:text="@{model.authorName}"
                 app:layout_constraintStart_toEndOf="@+id/author"
                 app:layout_constraintTop_toTopOf="parent" />
