@@ -4,7 +4,6 @@ package com.madonasyombua.dictionarykotlin.data.datasource
 import com.madonasyombua.dictionarykotlin.data.response.BaseResponse
 import com.madonasyombua.dictionarykotlin.data.response.Results
 import com.madonasyombua.dictionarykotlin.data.services.Api
-//import com.madonasyombua.dictionarykotlin.data.services.MainApi
 import com.madonasyombua.dictionarykotlin.data.utils.ERROR_STATUS
 import com.madonasyombua.dictionarykotlin.data.utils.ErrorHelper
 import com.madonasyombua.dictionarykotlin.data.utils.safeApiCall

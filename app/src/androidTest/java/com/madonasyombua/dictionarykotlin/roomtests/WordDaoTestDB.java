@@ -10,20 +10,12 @@ import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.madonasyombua.dictionarykotlin.data.room.DictionaryDB;
 import com.madonasyombua.dictionarykotlin.data.room.dao.WordDao;
-import com.madonasyombua.dictionarykotlin.data.room.entity.WordEntity;
-
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.List;
-
-
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
 @RunWith(AndroidJUnit4.class)
 public class WordDaoTestDB {
