@@ -71,15 +71,15 @@
 
             <TextView
                 android:id="@+id/date_published"
-                android:layout_width="140dp"
-                android:layout_height="37dp"
+                android:layout_width="244dp"
+                android:layout_height="28dp"
                 android:layout_marginStart="@dimen/eight_dp"
                 android:layout_marginEnd="@dimen/eight_dp"
                 android:text="@{@string/word_written(model.writtenOn)}"
                 android:textSize="12sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.315"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/author_text_view" />
 
