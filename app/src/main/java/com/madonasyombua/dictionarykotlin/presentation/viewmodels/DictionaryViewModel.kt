@@ -62,7 +62,8 @@ class DictionaryViewModel(private val dictionaryUseCase: DictionaryUseCase,
         launchGetAllWords()
     }
 
-    private fun launchGetAllWords() = GlobalScope.launch(coroutinesContextProvider.io) {
+    private fun launchGetAllWords() =
+        GlobalScope.launch(coroutinesContextProvider.io) {
         val result = dictionaryLocalUseCase.getAllWords()
         withContext(coroutinesContextProvider.io) { onResultWords(result) }
     }
