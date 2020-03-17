@@ -2,9 +2,12 @@ package com.madonasyombua.dictionarykotlin.data.response
 
 /**
  * @author madona
- * A sealed class allows you to represent constrained hierarchies in which an object can only be of one of the given types.
+ * Like abstract classes, sealed classes allows you to represent constrained hierarchies in which an object can only be of one of the given types.
  * That is, we have a class with a specific number of subclasses.
+ * The child classes can be any type of class example(a data class, an object, a regular class, or even another sealed class)
 **/
+
+//Results : Success, Error
 sealed class Results<out T : Any> {
 
     data class Success<out T : Any>(val data: T) : Results<T>()
@@ -16,4 +19,5 @@ sealed class Results<out T : Any> {
             is Error -> "Error[exception=$exception]"
         }
     }
+
 }

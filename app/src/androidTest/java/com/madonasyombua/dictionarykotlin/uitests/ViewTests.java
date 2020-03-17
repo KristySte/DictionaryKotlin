@@ -1,11 +1,8 @@
 package com.madonasyombua.dictionarykotlin.uitests;
 
-import android.widget.EditText;
-
 
 import androidx.lifecycle.MediatorLiveData;
 
-import androidx.lifecycle.ViewModelProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
@@ -14,7 +11,6 @@ import com.madonasyombua.dictionarykotlin.R;
 import com.madonasyombua.dictionarykotlin.data.room.entity.WordEntity;
 
 import com.madonasyombua.dictionarykotlin.presentation.ui.activities.DictionaryActivity;
-import com.madonasyombua.dictionarykotlin.presentation.viewmodels.DictionaryViewModel;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -32,8 +28,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.CoreMatchers.not;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.mock;
 
 @RunWith(AndroidJUnit4.class)
 public class ViewTests {
