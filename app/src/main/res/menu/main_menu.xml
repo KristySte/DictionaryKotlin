@@ -8,9 +8,6 @@
         android:title="@string/add_to_favorite"
         android:orderInCategory="1"
         app:showAsAction="never"/>
-    <item
-        android:title="@string/sort"
-        android:orderInCategory="2"
-        app:showAsAction="never"/>
+
 
 </menu>

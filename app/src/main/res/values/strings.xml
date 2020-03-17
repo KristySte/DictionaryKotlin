@@ -20,6 +20,10 @@
     <string name="sample">Sample:</string>
     <string name="published_on">Published On</string>
     <string name="thumbs">thumbs images</string>
+    <string name="more">more</string>
+    <string name="share">Urban Dictionary</string>
+    <string name="thumbs_up">thumbsUp</string>
+    <string name="thumbs_down">thumbsDown</string>
 
 
 </resources>

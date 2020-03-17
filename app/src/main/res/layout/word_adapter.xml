@@ -31,23 +31,25 @@
             android:orientation="vertical">
 
             <!--Author name Text View -->
+
+
             <TextView
                 android:id="@+id/word_definition"
-                android:layout_width="279dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_width="272dp"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="@dimen/eight_dp"
                 android:layout_marginRight="@dimen/eight_dp"
-                android:ellipsize="end"
                 android:lines="2"
                 android:text="@{model.definition}"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.17"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <TextView
                 android:id="@+id/author_text_view"
@@ -69,15 +71,15 @@
 
             <TextView
                 android:id="@+id/date_published"
-                android:layout_width="327dp"
-                android:layout_height="21dp"
+                android:layout_width="140dp"
+                android:layout_height="37dp"
                 android:layout_marginStart="@dimen/eight_dp"
                 android:layout_marginEnd="@dimen/eight_dp"
                 android:text="@{@string/word_written(model.writtenOn)}"
                 android:textSize="12sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/author_text_view" />
 
@@ -129,6 +131,23 @@
                 app:layout_constraintEnd_toStartOf="@+id/down_votes"
                 app:layout_constraintTop_toBottomOf="@+id/date_published"
                 app:srcCompat="@drawable/ic_thumb_down_red" />
+
+            <!-- ui -->
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="24dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:contentDescription="@string/more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/word_definition"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more_vert_black_24dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

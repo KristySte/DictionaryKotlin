@@ -1,13 +1,16 @@
 package com.madonasyombua.dictionarykotlin.presentation.ui.activities
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.madonasyombua.dictionarykotlin.R
@@ -16,6 +19,7 @@ import com.madonasyombua.dictionarykotlin.data.utils.Intent1
 import com.madonasyombua.dictionarykotlin.data.utils.ERROR_STATUS
 import com.madonasyombua.dictionarykotlin.data.utils.ErrorHelper
 import com.madonasyombua.dictionarykotlin.data.utils.observeWith
+import com.madonasyombua.dictionarykotlin.databinding.ActivityDictionaryBinding
 import com.madonasyombua.dictionarykotlin.presentation.ui.adapters.DictionaryAdapter
 import com.madonasyombua.dictionarykotlin.presentation.viewmodels.DictionaryViewModel
 import com.madonasyombua.dictionarykotlin.presentation.viewmodels.DictionaryViewModelFactory
@@ -30,6 +34,8 @@ import org.koin.android.ext.android.inject
 class DictionaryActivity : AppCompatActivity() {
 
     private lateinit var dictionaryViewModel: DictionaryViewModel
+    private lateinit var binding : ActivityDictionaryBinding
+
     private val dictionaryViewModelFactory by inject<DictionaryViewModelFactory>()
 
     private lateinit var dictionaryAdapter: DictionaryAdapter
@@ -38,7 +44,9 @@ class DictionaryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dictionary)
+        //setContentView(R.layout.activity_dictionary)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_dictionary)
+
         dictionaryViewModel = ViewModelProviders.of(this,dictionaryViewModelFactory ).get(DictionaryViewModel::class.java)
         recycler_word.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
@@ -50,7 +58,9 @@ class DictionaryActivity : AppCompatActivity() {
         dictionaryViewModel.uiModel.observeWith(this, this:: onSuccess)
         dictionaryViewModel.errorBase.observeWith(this, this::onError)
 
-        search_button.setOnClickListener{
+
+         binding.searchButton
+             .setOnClickListener{
             dictionaryViewModel.getDefinition(word_search.text.toString().trim())
 
         }
@@ -63,6 +73,7 @@ class DictionaryActivity : AppCompatActivity() {
 
 
         })
+
     }
 
     private fun onSuccess(data: List<Word>){
