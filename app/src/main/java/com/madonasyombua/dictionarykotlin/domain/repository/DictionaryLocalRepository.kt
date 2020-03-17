@@ -16,7 +16,8 @@ import kotlinx.coroutines.*
 class DictionaryLocalRepository (private val wordDao: WordDao){
 
 
-    //get word entries
+    //we add the suspend modifier to the function to get word entries
+    //the suspend modifier tells the compiler that this function needs to be executed inside a coroutine
     suspend fun getAllWordEntries(): List<WordEntity> {
         return withContext(Dispatchers.Default) {
             wordDao.getWordList()
